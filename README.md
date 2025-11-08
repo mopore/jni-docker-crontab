@@ -2,13 +2,13 @@
 
 A simple wrapper over `docker` to all complex cron job to be run in other containers.
 
-## Supported tags and Dockerfile links
+## Quick Setup (from JNI)
+Create the image:
+```shields
+docker buildx build --load -t docker-crontab .
+```
 
--	[`latest` (*Dockerfile*)](https://github.com/willfarrell/docker-crontab/blob/master/Dockerfile)
--	[`1.0.0` (*Dockerfile*)](https://github.com/willfarrell/docker-crontab/blob/1.0.0/Dockerfile)
--	[`0.6.0` (*Dockerfile*)](https://github.com/willfarrell/docker-crontab/blob/0.6.0/Dockerfile)
-
-![](https://img.shields.io/docker/pulls/willfarrell/crontab "Total docker pulls") [![](https://images.microbadger.com/badges/image/willfarrell/crontab.svg)](http://microbadger.com/images/willfarrell/crontab "Get your own image badge on microbadger.com")
+Check the example in `docker_compose_example` for a simple hello example.
 
 ## Why?
 Yes, I'm aware of [mcuadros/ofelia](https://github.com/mcuadros/ofelia) (>250MB when this was created), it was the main inspiration for this project. 
