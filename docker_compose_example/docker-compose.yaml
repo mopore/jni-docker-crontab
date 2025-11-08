@@ -1,0 +1,15 @@
+services:
+  sample-app-test:
+    container_name: crontab-sample-app
+    image: alpine:3.20
+    restart: always
+    command: sh -c "while :; do sleep 1; done"
+
+  cron:
+    container_name: docker-crontab
+    image: docker-crontab
+    depends_on:
+      - sample-app-test
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ${PWD}/docker-crontab-config.json:/opt/crontab/config.json:rw
