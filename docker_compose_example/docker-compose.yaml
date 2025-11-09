@@ -1,13 +1,14 @@
 services:
   sample-app-test:
     container_name: crontab-sample-app
-    image: alpine:3.20
-    restart: always
+    image: alpine:latest
+    restart: unless-stopped
     command: sh -c "while :; do sleep 1; done"
 
   cron:
     container_name: docker-crontab
     image: docker-crontab
+    restart: always
     depends_on:
       - sample-app-test
     volumes:

@@ -1,10 +1,10 @@
 {
-  "Check PAN runs every 1 minutes": {
+  "Print 'Hello' every minute": {
     "schedule": "@every 1m",
-    "comment": "Print hello every 1 minutes",
+    "comment": "Print 'hello' every 1 minute(s) in sample app container",
     "dockerargs": "--rm",
     "command": "echo 'Trigger for sample app...'",
-    "image": "alpine:3.20",
-    "trigger": [{ "command": "echo hello", "container": "crontab-sample-app" }]
+    "image": "alpine:latest",
+    "trigger": [{ "command": "echo 'hello you'", "container": "crontab-sample-app" }]
   }
 }
