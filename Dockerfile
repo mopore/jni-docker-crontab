@@ -10,7 +10,7 @@ RUN apk --no-cache add wget ca-certificates gzip \
  && mv dasel_linux_${DASEL_ARCH} dasel \
  && chmod +x dasel
 
-FROM docker:stable
+FROM docker:29-cli
 ENV HOME_DIR=/opt/crontab
 COPY --from=dasel-build /root/dasel /usr/local/bin/dasel
 RUN apk add --no-cache --virtual .run-deps gettext jq bash tini \

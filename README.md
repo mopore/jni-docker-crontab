@@ -1,5 +1,6 @@
 # docker-crontab
 
+## JNI Preampel
 A simple wrapper over `docker` to all complex cron job to be run in other containers.
 This project is forked from https://github.com/willfarrell/docker-crontab to provide additional 
 features.
@@ -7,7 +8,7 @@ This project now:
 - Runs also on Apple Silicon (ARM64)
 - Uses the latest Alpine image
 
-## Quick Setup (from JNI)
+### Quick Setup
 To build and provide an image in registry.mopore.org run:
 ```shields
 docker buildx build \
@@ -17,9 +18,14 @@ docker buildx build \
   .
 ```
 
-Check the example in `docker_compose_example` for a simple hello example.
+### Locall Testing
+```
+docker compose up --build
+```
 
-## Why?
+---
+
+## Motivation
 Yes, I'm aware of [mcuadros/ofelia](https://github.com/mcuadros/ofelia) (>250MB when this was created), it was the main inspiration for this project. 
 A great project, don't get me wrong. It was just missing certain key enterprise features I felt were required to support where docker is heading.
 
