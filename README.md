@@ -8,9 +8,13 @@ This project now:
 - Uses the latest Alpine image
 
 ## Quick Setup (from JNI)
-Create the image:
+To build and provide an image in registry.mopore.org run:
 ```shields
-docker buildx build --load -t jni-docker-crontab .
+docker buildx build \
+  --platform linux/amd64,linux/arm64 \
+  -t registry.mopore.org/jni/jni-docker-crontab:latest \
+  --push \
+  .
 ```
 
 Check the example in `docker_compose_example` for a simple hello example.
