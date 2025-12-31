@@ -18,10 +18,14 @@ docker buildx build \
   .
 ```
 
-### Locall Testing
+### Local Testing
 ```
 docker compose up --build
 ```
+
+### Outdated Docker Client
+Change the tag `docker:29-cli` to a higher version in `Dockerfile` when docker client gets out of
+date.
 
 ---
 
